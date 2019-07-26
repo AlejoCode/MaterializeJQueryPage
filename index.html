@@ -39,6 +39,7 @@
               </ul>
             </div>
           </div>
+
         </nav>
       </div>    
       <ul class="sidenav" id="mobile-demo">
@@ -59,6 +60,22 @@
           </li>
         </ul>
 <!-- section :SLIDER -->
+<!-- <section class="effect ">
+    <div class="row">
+
+      <div  class="col s12 container-effect">
+
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/196308/manhattan-js-building.svg" class="chrysler-building">
+        <div class="clouds">
+          <img  src="./Ship-clipart-kid.png" class="js-cloud-1 cloud-1">
+          <img src="./Ship-clipart-kid.png" class="js-cloud-2 cloud-2">
+        </div>
+        <div id="ocean"></div>
+      </div>
+    </div>
+  
+</section> -->
+
         <section class="slider">
             <ul class="slides" >
                 <li>
@@ -198,10 +215,27 @@
             </div>
         </section>
         <!-- footer -->
-        <footer class="section darken-2 white-text center" style="background:#82cabf">
-            <p class="flow-text">Test &copy 2019</p>
+        <footer class="section darken-2 white-text center" style=" position:fixed; top: 520px; left: 0; z-index: 100">
+            <p class="flow-text"></p>
+            <section class="effect ">
+                <div class="row">
+            
+                  <div  class="col s12 container-effect">
+            
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/196308/manhattan-js-building.svg" class="chrysler-building">
+                    <div class="clouds">
+                      <!-- <img  src="./Ship-clipart-kid.png" class="js-cloud-1 cloud-1"> -->
+                      <img src="./Ship-clipart-kid.png" class="js-cloud-2 cloud-2">
+                    </div>
+                    <div id="ocean"></div>
+                  </div>
+                </div>
+              
+            </section>
         </footer>
     <!--JavaScript at end of body for optimized loading-->
+    <script src="js/jquery-3.4.1.min.js"></script>  
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
       // sidenav
@@ -228,7 +262,58 @@
     const ss=document.querySelectorAll('.scrollspy');
     M.ScrollSpy.init(ss, {});
     </script>
+    <script>
+    $(document).ready(function(){
 
+      $(window).scroll(function(){
+        windowTop = $(window).scrollTop();
+
+        $('.js-cloud-1').css({
+          'transform':'translateX('+(windowTop) * .3 +'px)'
+        });
+
+        $('.js-cloud-2').css({
+          'transform':'translateX('+(windowTop) * .9 +'px)'
+        });
+      });
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+ 
+ // make some waves.
+  var ocean = document.getElementById("ocean"),
+      waveWidth = 10,
+      waveCount = Math.floor(window.innerWidth/waveWidth),
+      docFrag = document.createDocumentFragment();
+  for(var i = 0; i < waveCount; i++){
+    var wave = document.createElement("div");
+    wave.className += " wave";
+    docFrag.appendChild(wave);
+    wave.style.left = i * waveWidth + "px";
+    wave.style.webkitAnimationDelay = (i/100) + "s";
+ 
+    var wave_middle = document.createElement("div");
+    wave_middle.className += " wave_middle";
+    docFrag.appendChild(wave_middle);
+    wave_middle.style.left = i * waveWidth + "px";
+    wave_middle.style.webkitAnimationDelay = (i/91) + "s";
+ 
+    var wave_bottom = document.createElement("div");
+    wave_bottom.className += " wave_bottom";
+    docFrag.appendChild(wave_bottom);
+    wave_bottom.style.left = i * waveWidth + "px";
+    wave_bottom.style.webkitAnimationDelay = (i/97) + "s";
+ 
+    var wave_light = document.createElement("div");
+    wave_light.className += " wave_light";
+    docFrag.appendChild(wave_light);
+    wave_light.style.left = i * waveWidth + "px";
+    wave_light.style.webkitAnimationDelay = 0 + "s";
+ 
+  }
+  ocean.appendChild(docFrag);
+ });</script>
   </body>
 </html>
       
