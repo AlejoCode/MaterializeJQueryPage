@@ -10,7 +10,7 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Test</title>
+    <title>Charlie</title>
   </head>
 
   <body id="home" class="scrollspy">
@@ -18,24 +18,21 @@
         <nav >
           <div class="container">
             <div class="nav-wrapper">
-              <a href="" class="brand-logo">LOGO</a>
+              <a href="" class="brand-logo" >
+                <img src="./logo.PNG" alt="" style="width: 50px">
+              </a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
                 <li>
-                  <a href="#home">lorem</a>
+                  <a href="personajes.html">Personajes</a>
                 </li>
                 <li>
-                  <a href="#serch">lorem</a>
+                  <a href="alcance.html">Mensaje</a>
                 </li>
                 <li>
-                  <a href="#popular">lorem ipsum </a>
+                  <a href="reflexion.html">Refelexión</a>
                 </li>
-                <li>
-                  <a href="#gallery">Lorem</a>
-                </li>
-                <li>
-                  <a href="#contact">Lorem</a>
-                </li>
+
               </ul>
             </div>
           </div>
@@ -44,20 +41,15 @@
       </div>    
       <ul class="sidenav" id="mobile-demo">
           <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#"> </a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
+              <a href="personajes.html">Personajes</a>
+            </li>
+            <li>
+              <a href="alcance.html">Mensaje</a>
+            </li>
+            <li>
+              <a href="reflexion.html">Refelexión</a>
+            </li>
+
         </ul>
 <!-- section :SLIDER -->
 <!-- <section class="effect ">
@@ -215,7 +207,7 @@
             </div>
         </section>
         <!-- footer -->
-        <footer class="section darken-2 white-text center" style=" position:fixed; top: 520px; left: 0; z-index: 100">
+        <footer class="section darken-2 white-text center" style=" position:fixed; bottom: 0; left: 0; z-index: 100">
             <p class="flow-text"></p>
             <section class="effect ">
                 <div class="row">
@@ -238,82 +230,82 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-      // sidenav
-      document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems);
-  });
-
-    //Slider
-    const slider=document.querySelector('.slider');
-    M.Slider.init(slider,{
-      indicators:false,
-      height:500,
-      transition:500,
-      interval:6000
-
-    })
-
-   
-    //Material Boxed
-    const mb=document.querySelectorAll('.materialboxed');
-    M.Materialbox.init(mb,{});
-    // scrollspy
-    const ss=document.querySelectorAll('.scrollspy');
-    M.ScrollSpy.init(ss, {});
-    </script>
-    <script>
-    $(document).ready(function(){
-
-      $(window).scroll(function(){
-        windowTop = $(window).scrollTop();
-
-        $('.js-cloud-1').css({
-          'transform':'translateX('+(windowTop) * .3 +'px)'
-        });
-
-        $('.js-cloud-2').css({
-          'transform':'translateX('+(windowTop) * .9 +'px)'
+        // sidenav
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+  
+      //Slider
+      const slider=document.querySelector('.slider');
+      M.Slider.init(slider,{
+        indicators:false,
+        height:500,
+        transition:500,
+        interval:6000
+  
+      })
+  
+     
+      //Material Boxed
+      const mb=document.querySelectorAll('.materialboxed');
+      M.Materialbox.init(mb,{});
+      // scrollspy
+      const ss=document.querySelectorAll('.scrollspy');
+      M.ScrollSpy.init(ss, {});
+      </script>
+      <script>
+      $(document).ready(function(){
+  
+        $(window).scroll(function(){
+          windowTop = $(window).scrollTop();
+  
+          $('.js-cloud-1').css({
+            'transform':'translateX('+(windowTop) * .3 +'px)'
+          });
+  
+          $('.js-cloud-2').css({
+            'transform':'translateX('+(windowTop) * .9 +'px)'
+          });
         });
       });
-    });
-    </script>
-    <script>
-    $(document).ready(function(){
- 
- // make some waves.
-  var ocean = document.getElementById("ocean"),
-      waveWidth = 10,
-      waveCount = Math.floor(window.innerWidth/waveWidth),
-      docFrag = document.createDocumentFragment();
-  for(var i = 0; i < waveCount; i++){
-    var wave = document.createElement("div");
-    wave.className += " wave";
-    docFrag.appendChild(wave);
-    wave.style.left = i * waveWidth + "px";
-    wave.style.webkitAnimationDelay = (i/100) + "s";
- 
-    var wave_middle = document.createElement("div");
-    wave_middle.className += " wave_middle";
-    docFrag.appendChild(wave_middle);
-    wave_middle.style.left = i * waveWidth + "px";
-    wave_middle.style.webkitAnimationDelay = (i/91) + "s";
- 
-    var wave_bottom = document.createElement("div");
-    wave_bottom.className += " wave_bottom";
-    docFrag.appendChild(wave_bottom);
-    wave_bottom.style.left = i * waveWidth + "px";
-    wave_bottom.style.webkitAnimationDelay = (i/97) + "s";
- 
-    var wave_light = document.createElement("div");
-    wave_light.className += " wave_light";
-    docFrag.appendChild(wave_light);
-    wave_light.style.left = i * waveWidth + "px";
-    wave_light.style.webkitAnimationDelay = 0 + "s";
- 
-  }
-  ocean.appendChild(docFrag);
- });</script>
+      </script>
+      <script>
+      $(document).ready(function(){
+   
+   // make some waves.
+    var ocean = document.getElementById("ocean"),
+        waveWidth = 10,
+        waveCount = Math.floor(window.innerWidth/waveWidth),
+        docFrag = document.createDocumentFragment();
+    for(var i = 0; i < waveCount; i++){
+      var wave = document.createElement("div");
+      wave.className += " wave";
+      docFrag.appendChild(wave);
+      wave.style.left = i * waveWidth + "px";
+      wave.style.webkitAnimationDelay = (i/100) + "s";
+   
+      var wave_middle = document.createElement("div");
+      wave_middle.className += " wave_middle";
+      docFrag.appendChild(wave_middle);
+      wave_middle.style.left = i * waveWidth + "px";
+      wave_middle.style.webkitAnimationDelay = (i/91) + "s";
+   
+      var wave_bottom = document.createElement("div");
+      wave_bottom.className += " wave_bottom";
+      docFrag.appendChild(wave_bottom);
+      wave_bottom.style.left = i * waveWidth + "px";
+      wave_bottom.style.webkitAnimationDelay = (i/97) + "s";
+   
+      var wave_light = document.createElement("div");
+      wave_light.className += " wave_light";
+      docFrag.appendChild(wave_light);
+      wave_light.style.left = i * waveWidth + "px";
+      wave_light.style.webkitAnimationDelay = 0 + "s";
+   
+    }
+    ocean.appendChild(docFrag);
+   });</script>
   </body>
 </html>
       
