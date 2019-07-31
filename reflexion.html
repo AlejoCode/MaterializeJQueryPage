@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,45 +15,92 @@
   </head>
 
   <body id="home" class="scrollspy">
+      <div id="dvBoton" class="dvBoton">
+          <button id="btnMute" class="mute" class="stick"><i class="fas fa-volume-off volumeOff"></i></button>
+          <audio id="medio" class="audio" src="audio/audio1.mp3" loop="loop" style="display: none">
+            <!-- <source src="audio/audio1.mp3" type="audio/mpeg"> -->
+        </audio>
+        </div>
+  
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script>
+          $(function() {
+  
+              const boton = $('#btnMute');
+              const dvBoton = $('#dvBoton');
+              const medio = $('#medio');
+              const playerfunction = function() {
+                  medio[0].play();
+  
+              };
+              boton.click(function() {
+                  boton.css("background-color", "transparent")
+                      // dvBoton.css("background-color", "black");
+                  playerfunction;
+              })
+  
+              dvBoton.click(function() {
+                  if (!medio[0].paused) {
+                      medio[0].pause();
+                      boton.html("<i class='fas fa-volume-mute volumeOff'></i>");
+                      boton.css('color', '#f2b913')
+                  } else {
+                      medio[0].play();
+                      boton.html("<i class='fas fa-volume-off volumeOff'></i>");
+                      boton.css('color', '#f2b913')
+                  }
+              });
+  
+              $(window).on("load", playerfunction);
+          })
+      </script>
       <div class="navbar-fixed">
         <nav >
           <div class="container">
             <div class="nav-wrapper">
-                <a href="" class="brand-logo" >
-                    <img src="./logo.PNG" alt="" style="width: 50px">
-                  </a>              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <a href="" class="brand-logo fuente" >  
+                WONKA
+              </a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
                 <li>
-                  <a href="index.html">Inicio</a>
+                      <a href="index.html">Inicio</a>
+                    </li>
+                <li>
+                  <a href="nosotros.html">Nosotros</a>
                 </li>
-                  <li>
-                      <a href="personajes.html">Personajes</a>
-                    </li>
-                    <li>
-                      <a href="alcance.html">Mensaje</a>
-                    </li>
-                
+                <li>
+                  <a href="personajes.html">Personajes</a>
+                </li>
+                <li>
+                  <a href="alcance.html">Alcance</a>
+                </li>
+                <li>
+                  <a href="tienda.html">Tienda</a>
+                </li>
               </ul>
             </div>
           </div>
+
         </nav>
       </div>    
       <ul class="sidenav" id="mobile-demo">
           <li>
-            <a href="#"></a>
+                <a href="index.html">Inicio</a>
+              </li>
+          <li>
+            <a href="nosotros.html">Nosotros</a>
           </li>
           <li>
-            <a href="#"></a>
+            <a href="reflexion.html">Reflexion</a>
           </li>
           <li>
-            <a href="#"> </a>
+            <a href="alcance.html">Alcance</a>
           </li>
           <li>
-            <a href="#"></a>
+            <a href="tienda.html">Tienda</a>
           </li>
-          <li>
-            <a href="#"></a>
-          </li>
+
         </ul>
 <!-- section :SLIDER -->
         <section class="slider">
@@ -93,7 +141,7 @@
           <div class="container">
             <div class="row">
                 <h4 class="center"  style="color: #764d30">
-                  <span style="color: #764d30 ">Reflexión </span>
+                  <span style="color: #f2b913">Reflexión </span>
                     </h4>
             
           
@@ -102,7 +150,9 @@
 <table>
 <td>
   <th><img src="imagenes/img1.jpg" width= "400px" height= "300px"   alt=""></th>
-  <th  style="text-align: justify; font-size: 130%;">El film se enmarca en un ambiente frío,
+  <th>  </th>
+  <th></th>
+  <th  style="text-align: justify;   color: yellowgreen;"> El film se enmarca en un ambiente frío,
      en una ciudad que sufre un duro invierno, donde las personas
       caminan con sus rostros grises como las paredes de cemento 
       de la fábrica de Willy Wonka… Algo sucede entonces, un mensaje a 
@@ -116,7 +166,7 @@
 </table>
 <table>
 <td>
-<th  style="text-align: justify; font-size: 115%;" >Y es justamente al atravesar el umbral de la fábrica de Willy Wonka 
+<th  style="text-align: justify; color: yellowgreen;" >Y es justamente al atravesar el umbral de la fábrica de Willy Wonka 
   cuando se crea una metáfora fantástica sobre el interior y el exterior 
   de un ser humano. Adentrarse en la fábrica de chocolate para ver sus 
   máquinas, sus obreros Oompa Loompas, sus fuentes de chocolate líquido
@@ -124,6 +174,8 @@
    sector, es internarse en las profundidades sicológicas de Wonka, un hombre
     con una sonrisa impecable…, tan impecable que se torna engañosa y casi
      terrorífica porque lo que muestra su exterior es una máscara para el dolor interno.</th>
+     <th>  </th>
+     <th></th>
 <th><img src="imagenes/img2.jpg" width= "450px" height= "300px"  alt=""></th>
 
 </td>
@@ -133,7 +185,10 @@
   <td>
 
 <th><img src="imagenes/img3.jpg"  width= "400px" height= "300px"  alt=""></th>
-<th  style="text-align: justify; font-size: 115%;">De este modo llegará a la vida de Wonka un niño llamado Charlie,
+<th>  </th>
+<th></th>
+
+<th  style="text-align: justify; color: yellowgreen;">De este modo llegará a la vida de Wonka un niño llamado Charlie,
    quien vive con su familia en una pequeña habitación, en uno de los 
    vecindarios marginales de la ciudad y gracias a su buena suerte cumplirá
     el sueño de entrar a la fábrica al obtener uno de los tiquetes dorados.
@@ -150,7 +205,7 @@
 <table>
 <td>
 
-<th style="text-align: justify; font-size: 115%;" >Esta es una historia fascinante sobre la humildad y la familia,
+<th style="text-align: justify; color: yellowgreen;" >Esta es una historia fascinante sobre la humildad y la familia,
    un viaje hacia lo más humano, donde Charlie comprueba que la vida es realmente
     dulce cuando se tiene a los amigos y a los seres queridos al lado, sin importar
      la cantidad de chocolates que se puedan comer; contrario a Wonka, para quien la
@@ -158,6 +213,8 @@
       los juicios de valor enraizados tercamente, este film nos pone ante dos espejos,
        uno llamado Wonka y otro llamado Charlie, cuyos reflejos a veces traen sabores
         muy dulces, otras veces amargos y, otras muchas, sabores agridulces.</th>
+        <th>  </th>
+        <th></th>
 <th><img src="imagenes/img4.jpg" width= "450px" height= "300px" alt=""></th>
 
   </td>
@@ -170,7 +227,32 @@
 
 
         <!-- Section:Contact -->
-       
+                 <!-- Section:RealFooter -->
+    <section class="section section-follow text center footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h4 class="titleFooter">Charlie y la fabrica de chocolate</h4>
+                    <p id="pfoot">Siguenos en redes sociales para encontrar ofertas especiales!</p>
+                    <a href="#">
+                        <i class="iconRedes fab fa-facebook fa-4x"></i>
+                    </a>
+                    <a href="#">
+                        <i class="iconRedes fab fa-twitter fa-4x"></i>
+                    </a>
+                    <a href="#">
+                        <i class="iconRedes fab fa-linkedin fa-4x"></i>
+                    </a>
+                    <a href="#">
+                        <i class="iconRedes fab fa-google-plus fa-4x"></i>
+                    </a>
+                    <a href="#">
+                        <i class="iconRedes fab fa-pinterest fa-4x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
         <!-- footer -->
         <footer class="section darken-2 white-text center" style=" position:fixed; bottom: 0; left: 0; z-index: 100">
             <p class="flow-text"></p>

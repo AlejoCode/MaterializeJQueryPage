@@ -1,3 +1,17 @@
+
+@font-face {
+    font-family: "WillyWonka";
+  	src: url("../fonts/WillyWonka.ttf")
+    }
+    :root {
+      --mainPink: #ef7998;
+      --mainYellow: rgb(249, 228, 148);
+      --mainWhite: #fff;
+      --mainBlack: #000;
+      --yellowTrans: rgba(249, 228, 148, 0.5);
+      --mainGrey: rgb(238, 238, 238);
+    }
+  
 .section-search input{
     padding: 5px !important;
     font-size: 18px !important;
@@ -9,15 +23,23 @@
 }
 
 nav{
-    background: #fde48f;
+    background: #641051;
 }
+/* enlaces */ 
 li>a{
-    color: #764d30 !important;
+    color: #f2b913  !important;
     font-weight: bolder;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    font-family: 'archivo'
+}
+li>a:hover{
+  color:#a91d7f  !important
 }
 .brand-logo{
-    color: #764d30 !important
+    color: #f2b913 !important
+}
+.brand-logo:hover{
+  color: #a91d7f !important
 }
 p{
     color: #424242;
@@ -100,8 +122,8 @@ canvas {
 .wave {
   position: absolute;
   bottom: 0;
-  background: #cfb56a;
-  opacity: 0.5;
+  background: #b20e78;
+  /* opacity: 0.5; */
   display: inline-block;
   height: 35%;
   width: 10px;
@@ -115,8 +137,8 @@ canvas {
 .wave_middle {
   position: absolute;
   bottom: 0;
-  background: #c4a859;
-  opacity: 0.3;
+  background: #f2b913;
+  opacity: 0.4;
   display: inline-block;
   height: 27%;
   width: 10px;
@@ -150,7 +172,7 @@ canvas {
   z-index: 5 !important;
   animation-name: dostuff_light;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite;  
   transition-timing-function: ease-in-out;
 }
 
@@ -175,3 +197,158 @@ canvas {
   50% {height: 4%;bottom: 35%;}
   100% {height: 1%;bottom: 31%;}
 }
+
+.fuente{
+  font-size: 5rem;  
+  font-family: "WillyWonka"
+}
+
+#cart-info{
+  width: 8%;
+  display:flex;
+  justify-content: space-around ;
+  position: absolute;
+  top: 1.4rem;
+  color: #f2b913;
+  margin-left: 85%;
+}
+
+#cart-info p{
+  margin-left: 20px;
+  margin-top: 0px;
+  color: #f2b913;
+  font-weight: 500
+}
+
+/* cart */
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  background: var(--mainWhite);
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.5);
+  width: 0;
+  overflow: hidden;
+}
+.show-cart {
+  width: 18rem;
+  background: #b20e78;
+  padding: 2rem 1.5rem;
+  transform: rotateY(-360deg);
+  margin-top: 5%;
+  box-shadow:-1px 1px 10px  1px black;
+
+}
+.cart-item {
+  
+
+  display: flex;
+  justify-content: space-around
+}
+
+.responsive-img{
+  width: 30%;
+  margin-top: 2%;
+}
+
+.cart-total-container{
+  display: flex;
+  justify-content: space-around;
+}
+body{
+  background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#row {
+  /* background:black ; */
+  padding: 3rem;
+  margin: 5rem;
+  margin-top: -2rem;
+  width: 90%
+}
+
+/* CarlosMario */
+
+
+.titleFooter {
+  font-family: 'WillyWonka';
+  color: #f2b913;
+  text-shadow: 3px 5px black;
+}
+
+.titleFooter:hover {
+  text-shadow: 5px 7px black;
+  /* transition: 0.5s ease-in; */
+}
+
+.mute {
+  position: fixed;
+  z-index: 10;
+  top: 70%;
+  float: left;
+  background-color: transparent;
+  color: #f2b913;
+  height: 64px;
+  width: 80px;
+  border: none;
+}
+
+.mute:hover {
+  color: grey !important;
+  transition: 0.5s ease-in;
+}
+
+.dvBoton {
+  margin-left: 2em;
+  background-color: transparent;
+}
+
+.volumeOff {
+  /* margin-left: 5%; */
+  /* margin-right: 50%; */
+  margin-bottom: 50%;
+  background-color: transparent;
+  font-size: 55px;
+  height: 25px;
+  width: 25px;
+}
+
+.footer {
+  margin-bottom: 5em;
+  background-color: #641051 !important;
+}
+
+.iconRedes {
+  color: #f2b913 !important;
+  text-shadow: 4px 7px black;
+}
+
+.iconRedes:hover {
+  /* color: gray !important; */
+  text-shadow: 6px 11px black;
+  /* transition: 0.5s ease-in; */
+}
+
+#pfoot {
+  color: #f2b913;
+  text-shadow: 1px 2px black;
+  font-size: 25px;
+}
+.subtitulosNosotros{
+  text-align: left;
+  font-size: 40px;
+  margin-left:6%;
+  margin-bottom:2%;
+  color: #f2b913;
+}
+
+
+/* body{
+font-family: 'Montserrat', sans-serif;
+
+
+} */
